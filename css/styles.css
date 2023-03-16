@@ -50,6 +50,14 @@ ol {
     color: var(--color-text-paragraf);
 }
 
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+}
+
 .reset-px {
     display: block;
 }
@@ -625,6 +633,50 @@ footer {
     fill: #FFFFFF;
 }
 
+/* ============================== Backdrop ================================== */
+
+.backdrop {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+}
+
+.modal {
+    position: absolute;
+    width: 408px;
+    height: 576px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #FCFCFC;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.modal-close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    padding: 0;
+
+    background-color: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    fill: #2E2F42;
+
+}
+
+
 /* ============================== Portfolio ================================== */
 /* ============================== Selection ================================== */
 
@@ -663,7 +715,9 @@ footer {
     border-radius: 4px;
     cursor: pointer;
 
-    transition: selection: 250ms cubic-bezier: (0.4, 0, 0.2, 1);
+    transition: background-color: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
 }
 
 .selection:hover,
@@ -692,6 +746,7 @@ footer {
     flex-basis: calc((100% - 48px) / 3);
 
     transition-duration: 250ms cubic-bezier: (0.4, 0, 0.2, 1);
+
 }
 
 .link-foto:hover,
@@ -714,7 +769,6 @@ footer {
     overflow: hidden;
 }
 
-
 .overlay {
     position: absolute;
     font-weight: 400;
@@ -735,10 +789,15 @@ footer {
 }
 
 
-.list-link-foto-wraper:hover .overlay,
+/* .list-link-foto-wraper:hover .overlay,
 .list-link-foto-wraper:focus .overlay {
+    transform: translate(0, 0);} */
+
+.link-foto:hover .overlay,
+.link-foto:focus .overlay {
     transform: translate(0, 0);
 }
+
 
 
 
